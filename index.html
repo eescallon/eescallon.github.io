@@ -1,0 +1,493 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Eduardo Escallón CV</title>
+<meta property="og:title" content="Eduardo Escallón · Director de Tecnología">
+<meta property="og:description" content="Ingeniero de Sistemas con más de 13 años en desarrollo de software. React, Next.js, React Native, Symfony y Node.js.">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2313283d'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23e7ab62' text-anchor='middle'%3EEE%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Hoja de vida de Eduardo Escallón, Director de Tecnología e Ingeniero de Sistemas con más de 13 años en desarrollo de software.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+/* Lectura del brief: CV de un director de tecnología para reclutadores; sobrio, editorial, un solo acento cobre, radios de 4 y 8px.
+   Layout: banda hero a todo el ancho; debajo, columna de lectura de 960px. Experiencia en grid fecha | contenido, habilidades por categorías, proyectos en tarjetas. */
+:root {
+  /* 3 colores: dominante (tinta azul marino), secundario (pizarra) y acento (cobre) + superficies neutras frías */
+  --dominant: #13283d;
+  --secondary: #4e6072;
+  --accent: #9a5414;
+  --bg: #f6f8fa;
+  --surface: #fcfdfd;
+  --r-sm: 4px;
+  --r-md: 8px;
+  --line: #dde4ea;
+  --accent-wash: #f8efe4;
+  --hero-bg: #13283d;
+  --hero-fg: #f3f7fa;
+  --hero-muted: #b9c7d3;
+  --hero-accent: #e7ab62;
+  --shadow: 0 1px 2px rgba(19, 40, 61, .06), 0 8px 24px rgba(19, 40, 61, .08);
+  --f-head: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body: "Source Sans 3", "Segoe UI", Roboto, "Open Sans", Arial, sans-serif;
+  /* Movimiento: curvas propias en lugar de "ease", duraciones de interfaz bajo 250ms */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --t-press: 120ms;
+  --t-hover: 200ms;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --dominant: #e6edf3; --secondary: #a3b2bf; --accent: #e2a560;
+    --bg: #0d1620; --surface: #142230; --line: #23364a; --accent-wash: #3a2a17;
+    --hero-bg: #0a121b; --hero-fg: #eef3f7; --hero-muted: #9fb0bf; --hero-accent: #e7ab62;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --dominant: #e6edf3; --secondary: #a3b2bf; --accent: #e2a560;
+  --bg: #0d1620; --surface: #142230; --line: #23364a; --accent-wash: #3a2a17;
+  --hero-bg: #0a121b; --hero-fg: #eef3f7; --hero-muted: #9fb0bf; --hero-accent: #e7ab62;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--dominant);
+  font-family: var(--f-body); font-size: 17px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 960px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--f-head); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--hero-accent); outline-offset: 3px; border-radius: var(--r-sm); }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--hero-bg); color: var(--hero-fg); }
+.hero .wrap { padding-block: 64px 56px; display: grid; gap: 18px; }
+.role { font-family: var(--f-body); font-size: clamp(1.1rem, 2.4vw, 1.3rem); font-weight: 600; color: var(--hero-accent); margin-top: -8px; }
+.hero h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700; line-height: 1.05; letter-spacing: -.01em; }
+.tagline { font-size: 1.08rem; color: var(--hero-fg); max-width: 60ch; line-height: 1.55; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 22px; color: var(--hero-muted); font-size: .95rem; padding: 0; margin: 0; list-style: none; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  padding: 10px 18px; border-radius: var(--r-md); font: 600 .95rem/1 var(--f-body);
+  text-decoration: none; cursor: pointer; border: 1.5px solid transparent;
+  transition: transform var(--t-press) var(--ease-out), background-color var(--t-hover) var(--ease-out), color var(--t-hover) var(--ease-out), border-color var(--t-hover) var(--ease-out);
+}
+.btn svg { width: 18px; height: 18px; flex: none; transition: transform var(--t-hover) var(--ease-out); }
+.btn-primary { background: var(--hero-accent); color: #0a1c27; }
+.btn-ghost { background: transparent; color: var(--hero-fg); border-color: rgba(243, 247, 250, .35); }
+.btn:active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover { background: color-mix(in srgb, var(--hero-accent) 88%, #fff); }
+  .btn-primary:hover svg { transform: translateY(2px); }
+  .btn-ghost:hover { border-color: var(--hero-accent); color: var(--hero-accent); }
+}
+
+.status { font-size: .85rem; color: var(--hero-muted); min-height: 1.4em; }
+
+/* ---------- Secciones ---------- */
+main .wrap { display: grid; gap: 56px; padding-block: 56px 40px; }
+.sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 22px; }
+.sec-head h2 { font-size: 1.65rem; font-weight: 700; }
+.sec-head::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.lead { font-size: 1.08rem; color: var(--dominant); max-width: 68ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; padding: 0; list-style: none; }
+.facts li { background: var(--accent-wash); color: var(--dominant); padding: 6px 12px; border-radius: var(--r-md); font-size: .88rem; font-weight: 500; }
+.facts b { color: var(--accent); }
+
+/* Experiencia: línea de tiempo */
+.timeline { display: grid; gap: 0; }
+.timeline { gap: 34px !important; }
+.job { display: grid; grid-template-columns: 170px 1fr; gap: 8px 32px; }
+.job-date { font-size: .9rem; color: var(--secondary); font-variant-numeric: tabular-nums; padding-top: 3px; }
+.job-date .now { display: inline-block; margin-top: 6px; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); background: var(--accent-wash); padding: 2px 8px; border-radius: var(--r-sm); }
+.job-body { min-width: 0; }
+.job h3 { font-size: 1.25rem; font-weight: 700; line-height: 1.3; }
+.company { font-weight: 600; color: var(--accent); margin-top: 2px; }
+.company span { font-weight: 400; color: var(--secondary); }
+.job ul { margin: 10px 0 0; padding-left: 1.1em; display: grid; gap: 6px; max-width: 68ch; }
+.job li::marker { color: var(--accent); }
+
+/* Habilidades */
+[hidden] { display: none !important; }
+.skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 640px) { .skills { grid-template-columns: 1fr; } }
+.skill-group { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 20px; }
+.skill-group h3 { font-family: var(--f-body); font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--secondary); margin-bottom: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.chips li { border: 1px solid var(--line); border-radius: var(--r-sm); padding: 4px 10px; font-size: .9rem; font-weight: 500; transition: border-color var(--t-hover) var(--ease-out), color var(--t-hover) var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .chips li:hover { border-color: var(--accent); color: var(--accent); }
+}
+
+/* Proyectos */
+.projects { display: grid; grid-template-columns: 1.25fr 1fr; gap: 20px; }
+.card.tall { grid-row: span 2; }
+.stat { display: grid; gap: 2px; padding-block: 14px; }
+.card.tall .stat { margin-block: auto; }
+.stat b { font-family: var(--f-head); font-size: 3rem; line-height: 1; color: var(--accent); font-weight: 700; }
+.stat span { color: var(--secondary); font-size: .95rem; }
+@media (max-width: 720px) { .projects { grid-template-columns: 1fr; } .card.tall { grid-row: auto; } }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform var(--t-hover) var(--ease-out), border-color var(--t-hover) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+}
+/* Proyecto principal: ocupa todo el ancho y se lee primero */
+.card.feature { grid-column: 1 / -1; background: var(--accent-wash); border-color: transparent; }
+.card.feature .card-body { padding: 26px 28px; gap: 12px; }
+.card.feature h3 { font-size: 1.45rem; }
+.card.feature p.desc { font-size: 1.02rem; max-width: 62ch; }
+.card.feature .tags li { background: var(--surface); }
+.card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.card h3 { font-size: 1.15rem; font-weight: 700; line-height: 1.3; }
+.card-org { font-size: .85rem; color: var(--secondary); margin-top: -6px; }
+.card p.desc { font-size: .95rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; list-style: none; }
+.tags li { font-size: .82rem; font-weight: 600; color: var(--accent); background: var(--accent-wash); padding: 3px 8px; border-radius: var(--r-sm); }
+.card-links { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .9rem; font-weight: 600; }
+.card-links a { text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+.card-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.card-links .muted { color: var(--secondary); font-weight: 500; }
+
+/* Educación e idiomas */
+.split { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
+.split > section { min-width: 0; }
+.edu-item + .edu-item { margin-top: 18px; }
+.edu-item h3 { font-size: 1.08rem; font-weight: 700; }
+.edu-item p { color: var(--secondary); font-size: .93rem; }
+.lang { display: grid; gap: 12px; padding: 0; margin: 0; list-style: none; }
+.lang b { display: block; }
+.lang span { color: var(--secondary); font-size: .93rem; }
+.soft { margin-top: 24px; color: var(--secondary); font-size: .95rem; }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); }
+footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; color: var(--secondary); font-size: .9rem; }
+.copy { background: none; border: 1px solid var(--line); color: var(--dominant); border-radius: var(--r-sm); padding: 2px 10px; font: 500 .85rem var(--f-body); cursor: pointer; margin-left: 6px; transition: border-color var(--t-hover) var(--ease-out), color var(--t-hover) var(--ease-out), transform var(--t-press) var(--ease-out); }
+.copy:active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) {
+  .copy:hover { border-color: var(--accent); color: var(--accent); }
+}
+.status { transition: opacity var(--t-hover) var(--ease-out); }
+
+@media (max-width: 720px) {
+  .hero .wrap { padding-block: 44px 40px; }
+  .job { grid-template-columns: 1fr; gap: 4px; }
+  .split { grid-template-columns: 1fr; gap: 48px; }
+  main .wrap { gap: 44px; }
+}
+/* Movimiento reducido: sin desplazamientos ni escalas; se conservan los cambios de opacidad y color */
+@media (prefers-reduced-motion: reduce) {
+  .card:hover, .btn:active, .copy:active, .btn-primary:hover svg { transform: none !important; }
+}
+</style>
+
+</head><body><header class="hero">
+  <div class="wrap">
+    <h1>Eduardo Escallón</h1>
+    <p class="role">Director de Tecnología · Ingeniero de Sistemas</p>
+    <p class="tagline">Más de 13 años construyendo software. Hoy dirijo la tecnología de Aleati y desarrollo interfaces en React para Candelasoft.</p>
+    <ul class="meta">
+      <li>Barranquilla, Colombia</li>
+      <li>eduard.escallon@gmail.com</li>
+      <li>+57 300 760 9535</li>
+    </ul>
+    <div class="actions">
+      <a class="btn btn-primary" id="download" href="Eduardo_Escallon_CV_2026.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        Descargar CV PDF
+      </a>
+      <a class="btn btn-ghost" id="linkedin" href="" target="_blank" rel="noopener" hidden>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.5Z"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn btn-ghost" id="github" href="" target="_blank" rel="noopener" hidden>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
+        GitHub
+      </a>
+      <button class="btn btn-ghost" type="button" id="copy-email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        Copiar correo
+      </button>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section aria-labelledby="perfil">
+      <div class="sec-head"><h2 id="perfil">Perfil</h2></div>
+      <p class="lead">Ingeniero de Sistemas con Maestría en Dirección e Ingeniería de Sitios Web, especialización en Gerencia de Proyectos y más de 13 años de experiencia en desarrollo de software. Hoy dirijo toda el área digital y tecnológica de Aleati y la creación de sus proyectos de software. Experto en React.js, Next.js, TypeScript y Redux, con sólida experiencia backend en PHP (Symfony) y Node.js, integración de APIs y optimización de rendimiento. He liderado equipos y proyectos con metodologías ágiles, con foco en resultados, calidad de código y escalabilidad.</p>
+      <ul class="facts">
+        <li><b>13+</b> años en software</li>
+        <li><b>35%</b> mejora en atención al cliente con chatbot</li>
+        <li><b>75%</b> menos errores en producción</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="experiencia">
+      <div class="sec-head"><h2 id="experiencia">Experiencia</h2></div>
+      <div class="timeline">
+
+        <article class="job">
+          <p class="job-date">Ago 2025 a hoy<br><span class="now">Actual</span></p>
+          <div class="job-body">
+            <h3>Director de Tecnología</h3>
+            <p class="company">Aleati Espacios Comerciales S.A.S. <span>· Colombia · Remoto</span></p>
+            <ul>
+              <li>Lidero de forma integral el área digital y tecnológica de la compañía: estrategia, infraestructura, herramientas y canales digitales.</li>
+              <li>Diseño, desarrollo y mantengo una aplicación administrativa de uso interno que centraliza y gestiona todos los procesos de la compañía.</li>
+              <li>Gestiono de punta a punta los proyectos de software: requerimientos, arquitectura, desarrollo, despliegue y soporte.</li>
+              <li>Tomo las decisiones tecnológicas de la empresa.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <p class="job-date">Ago 2025 a hoy<br><span class="now">Actual</span></p>
+          <div class="job-body">
+            <h3>Desarrollador Frontend</h3>
+            <p class="company">Candelasoft <span>· Bogotá, Colombia · Remoto</span></p>
+            <ul>
+              <li>Desarrollo una aplicación móvil de chat en React Native.</li>
+              <li>Diseño la arquitectura de aplicaciones frontend en React para que sean escalables, sostenibles y fáciles de mantener.</li>
+              <li>Optimizo el rendimiento web para lograr tiempos de carga rápidos y una experiencia fluida en múltiples dispositivos.</li>
+              <li>Construyo interfaces intuitivas y responsivas en colaboración con equipos multidisciplinarios.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <p class="job-date">Abr 2021 a Jul 2025</p>
+          <div class="job-body">
+            <h3>Líder de Desarrollo</h3>
+            <p class="company">Browser Travel Solutions <span>· Bogotá, Colombia</span></p>
+            <ul>
+              <li>Dirigí el desarrollo de múltiples portales web con React.js, renderizado del lado del servidor con Next.js y manejo de estado con Redux.</li>
+              <li>Desarrollé un chatbot para MilesCarRental.com y Viajemos.com con TypeScript, React, Dialogflow y Symfony, mejorando la atención al cliente en un 35%.</li>
+              <li>Implementé nuevas funcionalidades y mantenimientos en sistemas basados en Symfony, React y Magento, con alto rendimiento y estabilidad.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <p class="job-date">Jun 2018 a Abr 2021</p>
+          <div class="job-body">
+            <h3>Desarrollador Web Senior</h3>
+            <p class="company">Browser Travel Solutions <span>· Bogotá, Colombia</span></p>
+            <ul>
+              <li>Desarrollé y mantuve sitios web en Magento 1.9, Symfony y React.js para mercados internacionales.</li>
+              <li>Optimicé los procesos de despliegue, reduciendo los errores en producción en un 75%.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <p class="job-date">Feb 2016 a Jun 2018</p>
+          <div class="job-body">
+            <h3>Ingeniero de Proyectos Junior</h3>
+            <p class="company">SEL Engineering <span>· Bogotá, Colombia</span></p>
+            <ul>
+              <li>Integré aplicaciones ASP.NET y realicé los desarrollos solicitados por la sede de Colombia.</li>
+              <li>Desarrollé un sistema de gestión publicitaria interna en múltiples pantallas administradas desde un dashboard.</li>
+              <li>Documenté nuevas funcionalidades, estableciendo un estándar uniforme para el equipo de desarrollo.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <p class="job-date">Jun 2014 a Feb 2016</p>
+          <div class="job-body">
+            <h3>Coordinador de Desarrollo</h3>
+            <p class="company">Araujo y Segovia <span>· Cartagena, Colombia</span></p>
+            <ul>
+              <li>Gestioné el desarrollo backend del software Sifinca 2.0 con PHP, Symfony 2 y Node.js.</li>
+              <li>Aseguré la correcta implementación de los requerimientos en tiempo y calidad.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <p class="job-date">Dic 2012 a Jun 2014</p>
+          <div class="job-body">
+            <h3>Auxiliar de Desarrollo</h3>
+            <p class="company">Araujo y Segovia <span>· Cartagena, Colombia</span></p>
+            <ul>
+              <li>Analicé y desarrollé requerimientos para Sifinca 2.0, mejorando la estabilidad y escalabilidad del sistema.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section aria-labelledby="habilidades">
+      <div class="sec-head"><h2 id="habilidades">Habilidades</h2></div>
+      <div class="skills">
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <ul class="chips"><li>React.js</li><li>React Native</li><li>Next.js</li><li>TypeScript</li><li>JavaScript</li><li>Redux</li><li>Vue.js</li><li>HTML5</li><li>CSS3</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Backend y datos</h3>
+          <ul class="chips"><li>PHP (Symfony)</li><li>Node.js</li><li>ASP.NET</li><li>Magento</li><li>REST</li><li>WebSockets</li><li>MySQL</li><li>PostgreSQL</li><li>MongoDB</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Herramientas y prácticas</h3>
+          <ul class="chips"><li>Git</li><li>GitFlow</li><li>Dialogflow</li><li>Jest</li><li>Pruebas unitarias</li><li>Principios SOLID</li><li>Documentación de código</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Dirección y gestión</h3>
+          <ul class="chips"><li>Dirección de tecnología</li><li>Arquitectura de software</li><li>Gestión de proyectos</li><li>Liderazgo técnico</li><li>Agile</li><li>Scrum</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="proyectos">
+      <div class="sec-head"><h2 id="proyectos">Proyectos</h2></div>
+      <div class="projects">
+
+        <article class="card feature">
+          <div class="card-body">
+            <h3>Plataforma administrativa interna</h3>
+            <p class="card-org">Aleati Espacios Comerciales S.A.S. · 2025 a hoy</p>
+            <p class="desc">Aplicación de uso interno que centraliza la gestión de todos los procesos de la compañía. Diseñada, desarrollada y mantenida de punta a punta.</p>
+            <ul class="tags"><li>Desarrollo full stack</li><li>Arquitectura</li><li>Despliegue</li></ul>
+            <div class="card-links"><span class="muted">Proyecto interno · demo a solicitud</span></div>
+          </div>
+        </article>
+
+        <article class="card tall">
+          <div class="card-body">
+            <h3>Chatbot de atención al cliente</h3>
+            <p class="card-org">Browser Travel Solutions · MilesCarRental y Viajemos</p>
+            <p class="desc">Asistente conversacional para dos portales de viajes y alquiler de autos.</p>
+            <p class="stat"><b>35%</b><span>de mejora en la atención al cliente</span></p>
+            <ul class="tags"><li>TypeScript</li><li>React</li><li>Dialogflow</li><li>Symfony</li></ul>
+            <div class="card-links">
+              <a href="https://www.milescarrental.com" target="_blank" rel="noopener">MilesCarRental.com ↗</a>
+              <a href="https://www.viajemos.com" target="_blank" rel="noopener">Viajemos.com ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>Sistema de pantallas institucionales</h3>
+            <p class="card-org">SEL Engineering</p>
+            <p class="desc">Gestión publicitaria interna desplegada en múltiples pantallas y administrada desde un dashboard central, para colaboradores y visitantes.</p>
+            <ul class="tags"><li>ASP.NET</li><li>Dashboard</li><li>Multipantalla</li></ul>
+            <div class="card-links"><span class="muted">Proyecto interno</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>Sifinca 2.0</h3>
+            <p class="card-org">Araujo y Segovia</p>
+            <p class="desc">Software corporativo de Araujo y Segovia: coordiné su desarrollo backend y mejoré su estabilidad y escalabilidad.</p>
+            <ul class="tags"><li>PHP</li><li>Symfony 2</li><li>Node.js</li></ul>
+            <div class="card-links"><span class="muted">Proyecto interno</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <div class="split">
+      <section aria-labelledby="educacion">
+        <div class="sec-head"><h2 id="educacion">Educación</h2></div>
+        <article class="edu-item">
+          <h3>Máster en Dirección e Ingeniería de Sitios Web</h3>
+          <p>Universidad Internacional de La Rioja (UNIR), España · 2014 a 2016</p>
+        </article>
+        <article class="edu-item">
+          <h3>Especialización en Gerencia de Proyectos</h3>
+          <p>Fundación Universitaria Tecnológico Comfenalco, Cartagena · 2013 a 2014</p>
+        </article>
+        <article class="edu-item">
+          <h3>Ingeniería de Sistemas</h3>
+          <p>Corporación Universitaria Rafael Núñez, Cartagena · 2008 a 2013</p>
+        </article>
+      </section>
+
+      <section aria-labelledby="idiomas">
+        <div class="sec-head"><h2 id="idiomas">Idiomas</h2></div>
+        <ul class="lang">
+          <li><b>Español</b><span>Nativo</span></li>
+          <li><b>Inglés</b><span>Intermedio · curso de 600 horas, Centro Colombo Americano de Cartagena</span></li>
+          <li><b>Italiano</b><span>Básico</span></li>
+        </ul>
+        <p class="soft">Liderazgo, trabajo en equipo, resolución de problemas, manejo de conflictos y trabajo bajo presión.</p>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Eduardo Escallón · eduard.escallon@gmail.com <button class="copy" type="button" data-copy="eduard.escallon@gmail.com">Copiar</button></p>
+    <p>Referencias disponibles a solicitud</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Enlaces de perfil: se muestran solo cuando tienen URL
+  var LINKS = { linkedin: "https://www.linkedin.com/in/eduardoes/", github: "" };
+  Object.keys(LINKS).forEach(function (k) {
+    var el = document.getElementById(k);
+    if (LINKS[k]) { el.href = LINKS[k]; el.hidden = false; }
+  });
+
+  var status = document.getElementById("status");
+  function say(msg) { status.textContent = msg; clearTimeout(say.t); say.t = setTimeout(function () { status.textContent = ""; }, 4000); }
+
+  function copy(text) {
+    var done = function () { say("Correo copiado: " + text); };
+    try {
+      navigator.clipboard.writeText(text).then(done, function () { say(text); });
+    } catch (e) { say(text); }
+  }
+  document.getElementById("copy-email").addEventListener("click", function () { copy("eduard.escallon@gmail.com"); });
+  document.querySelectorAll("[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () { copy(b.getAttribute("data-copy")); });
+  });
+
+  // Descarga del PDF: usa la capacidad de descargas si está disponible; si no, el enlace abre el PDF
+  var dl = document.getElementById("download");
+  var downloads = null;
+  if (window.claude && window.claude.use) {
+    window.claude.use("downloads").then(function (d) { downloads = d; }, function () {});
+  }
+  dl.addEventListener("click", function (e) {
+    if (!downloads) return;
+    e.preventDefault();
+    fetch(dl.getAttribute("href"))
+      .then(function (r) { if (!r.ok) throw new Error(); return r.blob(); })
+      .then(function (blob) { return downloads.save({ filename: "Eduardo_Escallon_CV_2026.pdf", data: blob }); })
+      .then(function () { say("CV descargado."); })
+      .catch(function (err) {
+        if (err && err.code === "declined") return;
+        window.open(dl.href, "_blank", "noopener");
+      });
+  });
+})();
+</script>
+</body></html>
