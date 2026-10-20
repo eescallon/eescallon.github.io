@@ -201,8 +201,8 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
 </head><body><header class="hero">
   <div class="wrap">
     <h1>Eduardo Escallón</h1>
-    <p class="role">Director de Tecnología · Ingeniero de Sistemas</p>
-    <p class="tagline">Más de 13 años construyendo software. Hoy dirijo la tecnología de Aleati y desarrollo interfaces en React para Candelasoft.</p>
+    <p class="role" data-en="Chief Technology Officer · Systems Engineer">Director de Tecnología · Ingeniero de Sistemas</p>
+    <p class="tagline" data-en="Over 13 years building software. Today I lead technology at Aleati and build React interfaces for Candelasoft.">Más de 13 años construyendo software. Hoy dirijo la tecnología de Aleati y desarrollo interfaces en React para Candelasoft.</p>
     <ul class="meta">
       <li>Barranquilla, Colombia</li>
       <li>eduard.escallon@gmail.com</li>
@@ -211,7 +211,7 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
     <div class="actions">
       <a class="btn btn-primary" id="download" href="Eduardo_Escallon_CV_2026.pdf" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
-        Descargar CV PDF
+        <span data-en="Download CV (PDF)">Descargar CV PDF</span>
       </a>
       <a class="btn btn-ghost" id="linkedin" href="" target="_blank" rel="noopener" hidden>
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.5Z"/></svg>
@@ -223,7 +223,11 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
       </a>
       <button class="btn btn-ghost" type="button" id="copy-email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        Copiar correo
+        <span data-en="Copy email">Copiar correo</span>
+      </button>
+      <button class="btn btn-ghost" type="button" id="lang-toggle" lang="en" aria-label="Switch to English">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+        <span>English</span>
       </button>
     </div>
     <p class="status" id="status" role="status" aria-live="polite"></p>
@@ -234,104 +238,104 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
   <div class="wrap">
 
     <section aria-labelledby="perfil">
-      <div class="sec-head"><h2 id="perfil">Perfil</h2></div>
-      <p class="lead">Ingeniero de Sistemas con Maestría en Dirección e Ingeniería de Sitios Web, especialización en Gerencia de Proyectos y más de 13 años de experiencia en desarrollo de software. Hoy dirijo toda el área digital y tecnológica de Aleati y la creación de sus proyectos de software. Experto en React.js, Next.js, TypeScript y Redux, con sólida experiencia backend en PHP (Symfony) y Node.js, integración de APIs y optimización de rendimiento. He liderado equipos y proyectos con metodologías ágiles, con foco en resultados, calidad de código y escalabilidad.</p>
+      <div class="sec-head"><h2 id="perfil" data-en="Profile">Perfil</h2></div>
+      <p class="lead" data-en="Systems Engineer with a Master&#x27;s in Web Site Management and Engineering, a specialization in Project Management and over 13 years of software development experience. Today I lead all digital and technology areas at Aleati and the creation of its software projects. Expert in React.js, Next.js, TypeScript and Redux, with solid backend experience in PHP (Symfony) and Node.js, API integration and performance optimization. I have led teams and projects with agile methodologies, focused on results, code quality and scalability.">Ingeniero de Sistemas con Maestría en Dirección e Ingeniería de Sitios Web, especialización en Gerencia de Proyectos y más de 13 años de experiencia en desarrollo de software. Hoy dirijo toda el área digital y tecnológica de Aleati y la creación de sus proyectos de software. Experto en React.js, Next.js, TypeScript y Redux, con sólida experiencia backend en PHP (Symfony) y Node.js, integración de APIs y optimización de rendimiento. He liderado equipos y proyectos con metodologías ágiles, con foco en resultados, calidad de código y escalabilidad.</p>
       <ul class="facts">
-        <li><b>13+</b> años en software</li>
-        <li><b>35%</b> mejora en atención al cliente con chatbot</li>
-        <li><b>75%</b> menos errores en producción</li>
+        <li data-en="&lt;b&gt;13+&lt;/b&gt; years in software"><b>13+</b> años en software</li>
+        <li data-en="&lt;b&gt;35%&lt;/b&gt; better customer service with a chatbot"><b>35%</b> mejora en atención al cliente con chatbot</li>
+        <li data-en="&lt;b&gt;75%&lt;/b&gt; fewer production errors"><b>75%</b> menos errores en producción</li>
       </ul>
     </section>
 
     <section aria-labelledby="experiencia">
-      <div class="sec-head"><h2 id="experiencia">Experiencia</h2></div>
+      <div class="sec-head"><h2 id="experiencia" data-en="Experience">Experiencia</h2></div>
       <div class="timeline">
 
         <article class="job">
-          <p class="job-date">Ago 2025 a hoy<br><span class="now">Actual</span></p>
+          <p class="job-date" data-en="Aug 2025 to present&lt;br&gt;&lt;span class=&quot;now&quot;&gt;Current&lt;/span&gt;">Ago 2025 a hoy<br><span class="now">Actual</span></p>
           <div class="job-body">
-            <h3>Director de Tecnología</h3>
-            <p class="company">Aleati Espacios Comerciales S.A.S. <span>· Colombia · Remoto</span></p>
+            <h3 data-en="Chief Technology Officer">Director de Tecnología</h3>
+            <p class="company">Aleati Espacios Comerciales S.A.S. <span data-en="· Colombia · Remote">· Colombia · Remoto</span></p>
             <ul>
-              <li>Lidero de forma integral el área digital y tecnológica de la compañía: estrategia, infraestructura, herramientas y canales digitales.</li>
-              <li>Diseño, desarrollo y mantengo una aplicación administrativa de uso interno que centraliza y gestiona todos los procesos de la compañía.</li>
-              <li>Gestiono de punta a punta los proyectos de software: requerimientos, arquitectura, desarrollo, despliegue y soporte.</li>
-              <li>Tomo las decisiones tecnológicas de la empresa.</li>
+              <li data-en="I lead the company&#x27;s digital and technology area end to end: strategy, infrastructure, tools and digital channels.">Lidero de forma integral el área digital y tecnológica de la compañía: estrategia, infraestructura, herramientas y canales digitales.</li>
+              <li data-en="I design, build and maintain an internal administrative application that centralizes and manages all of the company&#x27;s processes.">Diseño, desarrollo y mantengo una aplicación administrativa de uso interno que centraliza y gestiona todos los procesos de la compañía.</li>
+              <li data-en="I manage software projects from start to finish: requirements, architecture, development, deployment and support.">Gestiono de punta a punta los proyectos de software: requerimientos, arquitectura, desarrollo, despliegue y soporte.</li>
+              <li data-en="I make the company&#x27;s technology decisions.">Tomo las decisiones tecnológicas de la empresa.</li>
             </ul>
           </div>
         </article>
 
         <article class="job">
-          <p class="job-date">Ago 2025 a hoy<br><span class="now">Actual</span></p>
+          <p class="job-date" data-en="Aug 2025 to present&lt;br&gt;&lt;span class=&quot;now&quot;&gt;Current&lt;/span&gt;">Ago 2025 a hoy<br><span class="now">Actual</span></p>
           <div class="job-body">
-            <h3>Desarrollador Frontend</h3>
-            <p class="company">Candelasoft <span>· Bogotá, Colombia · Remoto</span></p>
+            <h3 data-en="Frontend Developer">Desarrollador Frontend</h3>
+            <p class="company">Candelasoft <span data-en="· Bogotá, Colombia · Remote">· Bogotá, Colombia · Remoto</span></p>
             <ul>
-              <li>Desarrollo una aplicación móvil de chat en React Native.</li>
-              <li>Diseño la arquitectura de aplicaciones frontend en React para que sean escalables, sostenibles y fáciles de mantener.</li>
-              <li>Optimizo el rendimiento web para lograr tiempos de carga rápidos y una experiencia fluida en múltiples dispositivos.</li>
-              <li>Construyo interfaces intuitivas y responsivas en colaboración con equipos multidisciplinarios.</li>
+              <li data-en="I develop a mobile chat application in React Native.">Desarrollo una aplicación móvil de chat en React Native.</li>
+              <li data-en="I design the architecture of React frontend applications so they are scalable, sustainable and easy to maintain.">Diseño la arquitectura de aplicaciones frontend en React para que sean escalables, sostenibles y fáciles de mantener.</li>
+              <li data-en="I optimize web performance to achieve fast load times and a smooth experience across devices.">Optimizo el rendimiento web para lograr tiempos de carga rápidos y una experiencia fluida en múltiples dispositivos.</li>
+              <li data-en="I build intuitive, responsive interfaces in collaboration with multidisciplinary teams.">Construyo interfaces intuitivas y responsivas en colaboración con equipos multidisciplinarios.</li>
             </ul>
           </div>
         </article>
 
         <article class="job">
-          <p class="job-date">Abr 2021 a Jul 2025</p>
+          <p class="job-date" data-en="Apr 2021 to Jul 2025">Abr 2021 a Jul 2025</p>
           <div class="job-body">
-            <h3>Líder de Desarrollo</h3>
+            <h3 data-en="Development Lead">Líder de Desarrollo</h3>
             <p class="company">Browser Travel Solutions <span>· Bogotá, Colombia</span></p>
             <ul>
-              <li>Dirigí el desarrollo de múltiples portales web con React.js, renderizado del lado del servidor con Next.js y manejo de estado con Redux.</li>
-              <li>Desarrollé un chatbot para MilesCarRental.com y Viajemos.com con TypeScript, React, Dialogflow y Symfony, mejorando la atención al cliente en un 35%.</li>
-              <li>Implementé nuevas funcionalidades y mantenimientos en sistemas basados en Symfony, React y Magento, con alto rendimiento y estabilidad.</li>
+              <li data-en="I led the development of several web portals with React.js, server-side rendering with Next.js and state management with Redux.">Dirigí el desarrollo de múltiples portales web con React.js, renderizado del lado del servidor con Next.js y manejo de estado con Redux.</li>
+              <li data-en="I built a chatbot for MilesCarRental.com and Viajemos.com with TypeScript, React, Dialogflow and Symfony, improving customer service by 35%.">Desarrollé un chatbot para MilesCarRental.com y Viajemos.com con TypeScript, React, Dialogflow y Symfony, mejorando la atención al cliente en un 35%.</li>
+              <li data-en="I implemented new features and maintenance on systems built with Symfony, React and Magento, with high performance and stability.">Implementé nuevas funcionalidades y mantenimientos en sistemas basados en Symfony, React y Magento, con alto rendimiento y estabilidad.</li>
             </ul>
           </div>
         </article>
 
         <article class="job">
-          <p class="job-date">Jun 2018 a Abr 2021</p>
+          <p class="job-date" data-en="Jun 2018 to Apr 2021">Jun 2018 a Abr 2021</p>
           <div class="job-body">
-            <h3>Desarrollador Web Senior</h3>
+            <h3 data-en="Senior Web Developer">Desarrollador Web Senior</h3>
             <p class="company">Browser Travel Solutions <span>· Bogotá, Colombia</span></p>
             <ul>
-              <li>Desarrollé y mantuve sitios web en Magento 1.9, Symfony y React.js para mercados internacionales.</li>
-              <li>Optimicé los procesos de despliegue, reduciendo los errores en producción en un 75%.</li>
+              <li data-en="I built and maintained websites in Magento 1.9, Symfony and React.js for international markets.">Desarrollé y mantuve sitios web en Magento 1.9, Symfony y React.js para mercados internacionales.</li>
+              <li data-en="I optimized deployment processes, reducing production errors by 75%.">Optimicé los procesos de despliegue, reduciendo los errores en producción en un 75%.</li>
             </ul>
           </div>
         </article>
 
         <article class="job">
-          <p class="job-date">Feb 2016 a Jun 2018</p>
+          <p class="job-date" data-en="Feb 2016 to Jun 2018">Feb 2016 a Jun 2018</p>
           <div class="job-body">
-            <h3>Ingeniero de Proyectos Junior</h3>
+            <h3 data-en="Junior Project Engineer">Ingeniero de Proyectos Junior</h3>
             <p class="company">SEL Engineering <span>· Bogotá, Colombia</span></p>
             <ul>
-              <li>Integré aplicaciones ASP.NET y realicé los desarrollos solicitados por la sede de Colombia.</li>
-              <li>Desarrollé un sistema de gestión publicitaria interna en múltiples pantallas administradas desde un dashboard.</li>
-              <li>Documenté nuevas funcionalidades, estableciendo un estándar uniforme para el equipo de desarrollo.</li>
+              <li data-en="I integrated ASP.NET applications and delivered the developments requested by the Colombia office.">Integré aplicaciones ASP.NET y realicé los desarrollos solicitados por la sede de Colombia.</li>
+              <li data-en="I built an internal advertising management system for multiple screens, administered from a dashboard.">Desarrollé un sistema de gestión publicitaria interna en múltiples pantallas administradas desde un dashboard.</li>
+              <li data-en="I documented new features, setting a uniform standard for the development team.">Documenté nuevas funcionalidades, estableciendo un estándar uniforme para el equipo de desarrollo.</li>
             </ul>
           </div>
         </article>
 
         <article class="job">
-          <p class="job-date">Jun 2014 a Feb 2016</p>
+          <p class="job-date" data-en="Jun 2014 to Feb 2016">Jun 2014 a Feb 2016</p>
           <div class="job-body">
-            <h3>Coordinador de Desarrollo</h3>
+            <h3 data-en="Development Coordinator">Coordinador de Desarrollo</h3>
             <p class="company">Araujo y Segovia <span>· Cartagena, Colombia</span></p>
             <ul>
-              <li>Gestioné el desarrollo backend del software Sifinca 2.0 con PHP, Symfony 2 y Node.js.</li>
-              <li>Aseguré la correcta implementación de los requerimientos en tiempo y calidad.</li>
+              <li data-en="I managed the backend development of the Sifinca 2.0 software with PHP, Symfony 2 and Node.js.">Gestioné el desarrollo backend del software Sifinca 2.0 con PHP, Symfony 2 y Node.js.</li>
+              <li data-en="I made sure requirements were implemented on time and with quality.">Aseguré la correcta implementación de los requerimientos en tiempo y calidad.</li>
             </ul>
           </div>
         </article>
 
         <article class="job">
-          <p class="job-date">Dic 2012 a Jun 2014</p>
+          <p class="job-date" data-en="Dec 2012 to Jun 2014">Dic 2012 a Jun 2014</p>
           <div class="job-body">
-            <h3>Auxiliar de Desarrollo</h3>
+            <h3 data-en="Development Assistant">Auxiliar de Desarrollo</h3>
             <p class="company">Araujo y Segovia <span>· Cartagena, Colombia</span></p>
             <ul>
-              <li>Analicé y desarrollé requerimientos para Sifinca 2.0, mejorando la estabilidad y escalabilidad del sistema.</li>
+              <li data-en="I analyzed and built requirements for Sifinca 2.0, improving the system&#x27;s stability and scalability.">Analicé y desarrollé requerimientos para Sifinca 2.0, mejorando la estabilidad y escalabilidad del sistema.</li>
             </ul>
           </div>
         </article>
@@ -340,47 +344,47 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
     </section>
 
     <section aria-labelledby="habilidades">
-      <div class="sec-head"><h2 id="habilidades">Habilidades</h2></div>
+      <div class="sec-head"><h2 id="habilidades" data-en="Skills">Habilidades</h2></div>
       <div class="skills">
         <div class="skill-group">
           <h3>Frontend</h3>
           <ul class="chips"><li>React.js</li><li>React Native</li><li>Next.js</li><li>TypeScript</li><li>JavaScript</li><li>Redux</li><li>Vue.js</li><li>HTML5</li><li>CSS3</li></ul>
         </div>
         <div class="skill-group">
-          <h3>Backend y datos</h3>
+          <h3 data-en="Backend and data">Backend y datos</h3>
           <ul class="chips"><li>PHP (Symfony)</li><li>Node.js</li><li>ASP.NET</li><li>Magento</li><li>REST</li><li>WebSockets</li><li>MySQL</li><li>PostgreSQL</li><li>MongoDB</li></ul>
         </div>
         <div class="skill-group">
-          <h3>Herramientas y prácticas</h3>
-          <ul class="chips"><li>Git</li><li>GitFlow</li><li>Dialogflow</li><li>Jest</li><li>Pruebas unitarias</li><li>Principios SOLID</li><li>Documentación de código</li></ul>
+          <h3 data-en="Tools and practices">Herramientas y prácticas</h3>
+          <ul class="chips"><li>Git</li><li>GitFlow</li><li>Dialogflow</li><li>Jest</li><li data-en="Unit testing">Pruebas unitarias</li><li data-en="SOLID principles">Principios SOLID</li><li data-en="Code documentation">Documentación de código</li></ul>
         </div>
         <div class="skill-group">
-          <h3>Dirección y gestión</h3>
-          <ul class="chips"><li>Dirección de tecnología</li><li>Arquitectura de software</li><li>Gestión de proyectos</li><li>Liderazgo técnico</li><li>Agile</li><li>Scrum</li></ul>
+          <h3 data-en="Leadership and management">Dirección y gestión</h3>
+          <ul class="chips"><li data-en="Technology leadership">Dirección de tecnología</li><li data-en="Software architecture">Arquitectura de software</li><li data-en="Project management">Gestión de proyectos</li><li data-en="Technical leadership">Liderazgo técnico</li><li>Agile</li><li>Scrum</li></ul>
         </div>
       </div>
     </section>
 
     <section aria-labelledby="proyectos">
-      <div class="sec-head"><h2 id="proyectos">Proyectos</h2></div>
+      <div class="sec-head"><h2 id="proyectos" data-en="Projects">Proyectos</h2></div>
       <div class="projects">
 
         <article class="card feature">
           <div class="card-body">
-            <h3>Plataforma administrativa interna</h3>
-            <p class="card-org">Aleati Espacios Comerciales S.A.S. · 2025 a hoy</p>
-            <p class="desc">Aplicación de uso interno que centraliza la gestión de todos los procesos de la compañía. Diseñada, desarrollada y mantenida de punta a punta.</p>
-            <ul class="tags"><li>Desarrollo full stack</li><li>Arquitectura</li><li>Despliegue</li></ul>
-            <div class="card-links"><span class="muted">Proyecto interno · demo a solicitud</span></div>
+            <h3 data-en="Internal administrative platform">Plataforma administrativa interna</h3>
+            <p class="card-org" data-en="Aleati Espacios Comerciales S.A.S. · 2025 to present">Aleati Espacios Comerciales S.A.S. · 2025 a hoy</p>
+            <p class="desc" data-en="Internal application that centralizes the management of all of the company&#x27;s processes. Designed, built and maintained end to end.">Aplicación de uso interno que centraliza la gestión de todos los procesos de la compañía. Diseñada, desarrollada y mantenida de punta a punta.</p>
+            <ul class="tags"><li data-en="Full stack development">Desarrollo full stack</li><li data-en="Architecture">Arquitectura</li><li data-en="Deployment">Despliegue</li></ul>
+            <div class="card-links"><span class="muted" data-en="Internal project · demo on request">Proyecto interno · demo a solicitud</span></div>
           </div>
         </article>
 
         <article class="card tall">
           <div class="card-body">
-            <h3>Chatbot de atención al cliente</h3>
-            <p class="card-org">Browser Travel Solutions · MilesCarRental y Viajemos</p>
-            <p class="desc">Asistente conversacional para dos portales de viajes y alquiler de autos.</p>
-            <p class="stat"><b>35%</b><span>de mejora en la atención al cliente</span></p>
+            <h3 data-en="Customer service chatbot">Chatbot de atención al cliente</h3>
+            <p class="card-org" data-en="Browser Travel Solutions · MilesCarRental and Viajemos">Browser Travel Solutions · MilesCarRental y Viajemos</p>
+            <p class="desc" data-en="Conversational assistant for two travel and car rental portals.">Asistente conversacional para dos portales de viajes y alquiler de autos.</p>
+            <p class="stat"><b>35%</b><span data-en="improvement in customer service">de mejora en la atención al cliente</span></p>
             <ul class="tags"><li>TypeScript</li><li>React</li><li>Dialogflow</li><li>Symfony</li></ul>
             <div class="card-links">
               <a href="https://www.milescarrental.com" target="_blank" rel="noopener">MilesCarRental.com ↗</a>
@@ -391,11 +395,11 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
 
         <article class="card">
           <div class="card-body">
-            <h3>Sistema de pantallas institucionales</h3>
+            <h3 data-en="Institutional screen system">Sistema de pantallas institucionales</h3>
             <p class="card-org">SEL Engineering</p>
-            <p class="desc">Gestión publicitaria interna desplegada en múltiples pantallas y administrada desde un dashboard central, para colaboradores y visitantes.</p>
-            <ul class="tags"><li>ASP.NET</li><li>Dashboard</li><li>Multipantalla</li></ul>
-            <div class="card-links"><span class="muted">Proyecto interno</span></div>
+            <p class="desc" data-en="Internal advertising management deployed on multiple screens and administered from a central dashboard, for employees and visitors.">Gestión publicitaria interna desplegada en múltiples pantallas y administrada desde un dashboard central, para colaboradores y visitantes.</p>
+            <ul class="tags"><li>ASP.NET</li><li>Dashboard</li><li data-en="Multi-screen">Multipantalla</li></ul>
+            <div class="card-links"><span class="muted" data-en="Internal project">Proyecto interno</span></div>
           </div>
         </article>
 
@@ -403,9 +407,9 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
           <div class="card-body">
             <h3>Sifinca 2.0</h3>
             <p class="card-org">Araujo y Segovia</p>
-            <p class="desc">Software corporativo de Araujo y Segovia: coordiné su desarrollo backend y mejoré su estabilidad y escalabilidad.</p>
+            <p class="desc" data-en="Corporate software of Araujo y Segovia: I coordinated its backend development and improved its stability and scalability.">Software corporativo de Araujo y Segovia: coordiné su desarrollo backend y mejoré su estabilidad y escalabilidad.</p>
             <ul class="tags"><li>PHP</li><li>Symfony 2</li><li>Node.js</li></ul>
-            <div class="card-links"><span class="muted">Proyecto interno</span></div>
+            <div class="card-links"><span class="muted" data-en="Internal project">Proyecto interno</span></div>
           </div>
         </article>
 
@@ -414,29 +418,29 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
 
     <div class="split">
       <section aria-labelledby="educacion">
-        <div class="sec-head"><h2 id="educacion">Educación</h2></div>
+        <div class="sec-head"><h2 id="educacion" data-en="Education">Educación</h2></div>
         <article class="edu-item">
-          <h3>Máster en Dirección e Ingeniería de Sitios Web</h3>
-          <p>Universidad Internacional de La Rioja (UNIR), España · 2014 a 2016</p>
+          <h3 data-en="Master&#x27;s in Web Site Management and Engineering">Máster en Dirección e Ingeniería de Sitios Web</h3>
+          <p data-en="Universidad Internacional de La Rioja (UNIR), Spain · 2014 to 2016">Universidad Internacional de La Rioja (UNIR), España · 2014 a 2016</p>
         </article>
         <article class="edu-item">
-          <h3>Especialización en Gerencia de Proyectos</h3>
-          <p>Fundación Universitaria Tecnológico Comfenalco, Cartagena · 2013 a 2014</p>
+          <h3 data-en="Specialization in Project Management">Especialización en Gerencia de Proyectos</h3>
+          <p data-en="Fundación Universitaria Tecnológico Comfenalco, Cartagena · 2013 to 2014">Fundación Universitaria Tecnológico Comfenalco, Cartagena · 2013 a 2014</p>
         </article>
         <article class="edu-item">
-          <h3>Ingeniería de Sistemas</h3>
-          <p>Corporación Universitaria Rafael Núñez, Cartagena · 2008 a 2013</p>
+          <h3 data-en="Systems Engineering">Ingeniería de Sistemas</h3>
+          <p data-en="Corporación Universitaria Rafael Núñez, Cartagena · 2008 to 2013">Corporación Universitaria Rafael Núñez, Cartagena · 2008 a 2013</p>
         </article>
       </section>
 
       <section aria-labelledby="idiomas">
-        <div class="sec-head"><h2 id="idiomas">Idiomas</h2></div>
+        <div class="sec-head"><h2 id="idiomas" data-en="Languages">Idiomas</h2></div>
         <ul class="lang">
-          <li><b>Español</b><span>Nativo</span></li>
-          <li><b>Inglés</b><span>Intermedio · curso de 600 horas, Centro Colombo Americano de Cartagena</span></li>
-          <li><b>Italiano</b><span>Básico</span></li>
+          <li><b data-en="Spanish">Español</b><span data-en="Native">Nativo</span></li>
+          <li><b data-en="English">Inglés</b><span data-en="Intermediate · 600-hour course, Centro Colombo Americano de Cartagena">Intermedio · curso de 600 horas, Centro Colombo Americano de Cartagena</span></li>
+          <li><b data-en="Italian">Italiano</b><span data-en="Basic">Básico</span></li>
         </ul>
-        <p class="soft">Liderazgo, trabajo en equipo, resolución de problemas, manejo de conflictos y trabajo bajo presión.</p>
+        <p class="soft" data-en="Leadership, teamwork, problem solving, conflict management and working under pressure.">Liderazgo, trabajo en equipo, resolución de problemas, manejo de conflictos y trabajo bajo presión.</p>
       </section>
     </div>
 
@@ -445,8 +449,8 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
 
 <footer>
   <div class="wrap">
-    <p>Eduardo Escallón · eduard.escallon@gmail.com <button class="copy" type="button" data-copy="eduard.escallon@gmail.com">Copiar</button></p>
-    <p>Referencias disponibles a solicitud</p>
+    <p>Eduardo Escallón · eduard.escallon@gmail.com <button class="copy" type="button" data-copy="eduard.escallon@gmail.com" data-en="Copy">Copiar</button></p>
+    <p data-en="References available on request">Referencias disponibles a solicitud</p>
   </div>
 </footer>
 
@@ -459,11 +463,61 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
     if (LINKS[k]) { el.href = LINKS[k]; el.hidden = false; }
   });
 
+  // Idioma: el español es el contenido base del HTML; el inglés vive en data-en
+  var lang = "es";
+  var T = {
+    es: {
+      pdf: "Eduardo_Escallon_CV_2026.pdf",
+      title: "Eduardo Escallón CV",
+      desc: "Hoja de vida de Eduardo Escallón, Director de Tecnología e Ingeniero de Sistemas con más de 13 años en desarrollo de software.",
+      ogTitle: "Eduardo Escallón · Director de Tecnología",
+      ogDesc: "Ingeniero de Sistemas con más de 13 años en desarrollo de software. React, Next.js, React Native, Symfony y Node.js.",
+      toggle: "English", toggleLabel: "Switch to English", toggleLang: "en",
+      copied: "Correo copiado: ", downloaded: "CV descargado."
+    },
+    en: {
+      pdf: "Eduardo_Escallon_CV_2026_EN.pdf",
+      title: "Eduardo Escallón CV",
+      desc: "Resume of Eduardo Escallón, Chief Technology Officer and Systems Engineer with over 13 years in software development.",
+      ogTitle: "Eduardo Escallón · Chief Technology Officer",
+      ogDesc: "Systems Engineer with over 13 years in software development. React, Next.js, React Native, Symfony and Node.js.",
+      toggle: "Español", toggleLabel: "Cambiar a español", toggleLang: "es",
+      copied: "Email copied: ", downloaded: "CV downloaded."
+    }
+  };
+  var i18n = document.querySelectorAll("[data-en]");
+  i18n.forEach(function (n) { n.setAttribute("data-es", n.innerHTML); });
+  var dl = document.getElementById("download");
+  var toggle = document.getElementById("lang-toggle");
+  function meta(sel, value) { var m = document.querySelector(sel); if (m) m.setAttribute("content", value); }
+  function setLang(next, persist) {
+    lang = next;
+    var t = T[lang];
+    i18n.forEach(function (n) { n.innerHTML = n.getAttribute(lang === "en" ? "data-en" : "data-es"); });
+    document.documentElement.lang = lang;
+    document.title = t.title;
+    meta('meta[name="description"]', t.desc);
+    meta('meta[property="og:title"]', t.ogTitle);
+    meta('meta[property="og:description"]', t.ogDesc);
+    dl.setAttribute("href", t.pdf);
+    toggle.lastElementChild.textContent = t.toggle;
+    toggle.setAttribute("aria-label", t.toggleLabel);
+    toggle.setAttribute("lang", t.toggleLang);
+    if (persist) { try { localStorage.setItem("lang", lang); } catch (e) {} }
+  }
+  toggle.addEventListener("click", function () { setLang(lang === "es" ? "en" : "es", true); });
+  (function () {
+    var q = /[?&]lang=(en|es)\b/.exec(location.search), saved = null;
+    try { saved = localStorage.getItem("lang"); } catch (e) {}
+    var pick = q ? q[1] : saved || ((navigator.language || "").slice(0, 2) === "en" ? "en" : "es");
+    if (pick === "en") setLang("en", false);
+  })();
+
   var status = document.getElementById("status");
   function say(msg) { status.textContent = msg; clearTimeout(say.t); say.t = setTimeout(function () { status.textContent = ""; }, 4000); }
 
   function copy(text) {
-    var done = function () { say("Correo copiado: " + text); };
+    var done = function () { say(T[lang].copied + text); };
     try {
       navigator.clipboard.writeText(text).then(done, function () { say(text); });
     } catch (e) { say(text); }
@@ -474,7 +528,6 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
   });
 
   // Descarga del PDF: usa la capacidad de descargas si está disponible; si no, el enlace abre el PDF
-  var dl = document.getElementById("download");
   var downloads = null;
   if (window.claude && window.claude.use) {
     window.claude.use("downloads").then(function (d) { downloads = d; }, function () {});
@@ -484,8 +537,8 @@ footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify
     e.preventDefault();
     fetch(dl.getAttribute("href"))
       .then(function (r) { if (!r.ok) throw new Error(); return r.blob(); })
-      .then(function (blob) { return downloads.save({ filename: "Eduardo_Escallon_CV_2026.pdf", data: blob }); })
-      .then(function () { say("CV descargado."); })
+      .then(function (blob) { return downloads.save({ filename: T[lang].pdf, data: blob }); })
+      .then(function () { say(T[lang].downloaded); })
       .catch(function (err) {
         if (err && err.code === "declined") return;
         window.open(dl.href, "_blank", "noopener");
